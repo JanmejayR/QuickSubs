@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "concurrently \"npm run dev --prefix frontend\" \"node backend/server.js\"",
+   "start:frontend": "npm run dev --prefix frontend",
+  "start:backend": "node backend/server.js",
+  "start": "npm-run-all --parallel start:frontend start:backend",
     "test": "echo Error exit 1"
   },
   "author": "Janmejay Rathore",
