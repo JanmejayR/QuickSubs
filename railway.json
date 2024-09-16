@@ -1,17 +1,13 @@
 {
-    "build": [
-      {
-        "service": "backend",
-        "command": "cd backend && npm install && npm run build"
+    "services": {
+      "backend": {
+        "build": "cd backend && npm install && npm run build",
+        "start": "cd backend && npm start"
       },
-      {
-        "service": "frontend",
-        "command": "cd frontend && npm install && npm run build"
+      "frontend": {
+        "build": "cd frontend && npm install && npm run build",
+        "start": "cd frontend && npm run start"
       }
-    ],
-    "start": {
-      "backend": "cd backend && npm start",
-      "frontend": "cd frontend && npm run start"
     }
   }
   
