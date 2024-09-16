@@ -3,7 +3,7 @@ import React from 'react';
 // Array of languages with their codes and names
 
 const languages = [
-    { code: 'en', name: 'English' },
+    { code: 'en-US', name: 'English' },
     { code: 'es', name: 'Spanish' },
     { code: 'fr', name: 'French' },
     { code: 'de', name: 'German' },

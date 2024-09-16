@@ -15,10 +15,9 @@ export const subtitleController = async(req,res)=>{
 
         if( subLanguage === inputVideoLanguage){
             res.status(200).json({subtitles : srtContent});
+            return;
         }
-        const translatedSrtContent =  await translateSRT(srtContent , inputVideoLanguage,  subLanguage);
-
-       
+        const translatedSrtContent =  await translateSRT(srtContent , inputVideoLanguage,  subLanguage);       
         res.status(200).json({subtitles : translatedSrtContent});
 
     }catch(error){

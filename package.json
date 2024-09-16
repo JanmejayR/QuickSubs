@@ -1,9 +1,13 @@
 {
-  "name": "backend",
+  "name": "quicksubs",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start:frontend": "npm run dev --prefix frontend",
+    "start:backend": " node backend/server.js", 
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Janmejay Rathore",
@@ -23,6 +27,7 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "concurrently": "^8.0.0",
     "nodemon": "^3.1.4"
   }
 }
