@@ -123,7 +123,7 @@ const VideoEdit = () => {
 
                 toast("Generating Subtitles...")
                 toast("Please wait for a min or two...")
-                const response = await fetch('http://localhost:5000/api/user/subtitles' , {
+                const response = await fetch('https://localhost:5000/api/user/subtitles' , {
                   method: 'post',
                   headers:{
                     'Content-Type': audioBlob.type,
