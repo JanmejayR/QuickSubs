@@ -8,16 +8,16 @@ export default defineConfig({
     exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
   },
   server: {
-    // port:5173,
-    // proxy:{
-    //   "/server":{
-    //     target:"http://localhost:5000"
-    //   }
-    // },
-    // headers: {
-    //   "Cross-Origin-Opener-Policy": "same-origin",
-    //   "Cross-Origin-Embedder-Policy": "require-corp",
-    // },
+    port:5173,
+    proxy:{
+      "/api":{
+        target:"https://quicksubs-production.up.railway.app"
+      }
+    },
+    headers: {
+      "Cross-Origin-Opener-Policy": "same-origin",
+      "Cross-Origin-Embedder-Policy": "require-corp",
+    },
   },
 });
 
