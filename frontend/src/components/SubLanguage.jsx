@@ -25,9 +25,9 @@ const SubLanguage = ({selectedInputVideoLanguage, setSelectedInputVideoLanguage 
     return (
 
        <div className='flex flex-col'>
-         <div  className='flex justify-center items-center my-4 mb-8 gap-10'>
-          <h2 className='text-white font-medium text-2xl'>Select Your Input Video's language :</h2>
-        <select className='w-48 h-10 rounded-lg' value={selectedInputVideoLanguage} onChange={(e) => setSelectedInputVideoLanguage(e.target.value)}>
+         <div  className='flex justify-center items-center my-4  gap-5 md:gap-16'>
+          <h2 className='text-white font-medium text-lg md:text-2xl'>Select Your Input <br/> Video's language </h2>
+        <select className=' w-32 md:w-48 h-10 rounded-lg' value={selectedInputVideoLanguage} onChange={(e) => setSelectedInputVideoLanguage(e.target.value)}>
             {languages.map((language) => (
                 <option key={language.code} value={language.code}>
                     {language.name}
@@ -36,9 +36,9 @@ const SubLanguage = ({selectedInputVideoLanguage, setSelectedInputVideoLanguage 
         </select>
         </div>
 
-        <div  className='flex justify-center items-center my-4 mb-16 gap-16'>
-          <h2 className='text-white font-medium text-2xl'>Select Desired Subtitle language :</h2>
-        <select className='w-48 h-10 rounded-lg' value={selectedSubtitleLanguage} onChange={(e) => setSelectedSubtitleLanguage(e.target.value)}>
+        <div  className='flex justify-center items-center mt-4 mb-8   gap-5 md:gap-16'>
+          <h2 className='text-white font-medium text-lg md:text-2xl'>Select Desired <br/> Subtitle language </h2>
+        <select className=' w-32 md:w-48 h-10 rounded-lg' value={selectedSubtitleLanguage} onChange={(e) => setSelectedSubtitleLanguage(e.target.value)}>
             {languages.map((language) => (
                 <option key={language.code} value={language.code}>
                     {language.name}

@@ -54,15 +54,15 @@ const Login = () => {
     }
   return (
     <main className='w-full h-full flex justify-center items-center '>
-        <div className=' h-3/4 w-1/3 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden'>
+        <div className=' w-72 h-80 md:h-3/4 md:w-1/3 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden'>
 
        
-        <h2 className='text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text mt-16'>
+        <h2 className='text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text mt-4 md:mt-16'>
 					Login
 				</h2>
         
         
-        <div className='flex w-full  justify-center items-center mt-16'>
+        <div className='flex w-full  justify-center items-center mt-4  md:mt-16'>
         <form onSubmit={handleLogin}>
 					<Input
 						type='text'

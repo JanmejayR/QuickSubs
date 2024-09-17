@@ -192,22 +192,22 @@ const VideoEdit = () => {
     }
   }
   return (
-    <main className="w-full h-full flex justify-center ">
-      <div className=" flex pt-16  items-center flex-col  w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden ">
+    <main className="w-full h-full flex justify-center items-start ">
+      <div className=" flex  pt-16  items-center flex-col  w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden ">
       {finalVideoUrl ? (
-          <video src={finalVideoUrl} controls className="mb-4 w-full max-w-xl">
+          <video src={finalVideoUrl} controls className="mb-4 h-48 w-72 md:w-full md:h-full md:max-w-xl rounded-xl md:rounded-nones">
             {subtitleUrl && <track src={subtitleUrl} kind="subtitles" srcLang="en" default />}
           </video>
         ) : (
           videoUrl && (
-            <video src={videoUrl} controls className="mb-4 w-full max-w-xl" />
+            <video src={videoUrl} controls className="mb-4 h-48 w-72 md:w-full md:h-full md:max-w-xl md:max-h-2xl rounded-xl md:rounded-none" />
           )
         )}         
        
           <SubLanguage selectedInputVideoLanguage={selectedInputVideoLanguage} setSelectedInputVideoLanguage={setSelectedInputVideoLanguage} selectedSubtitleLanguage={selectedSubtitleLanguage} setSelectedSubtitleLanguage = {setSelectedSubtitleLanguage}/>
        
             {authState.loading === false? <button
-              className="w-2/3 max-w-96 rounded-2xl h-16  bg-gradient-to-r from-green-500 to-emerald-600 text-white 
+              className="w-2/3 max-w-96 rounded-2xl h-16 md:mb-20  bg-gradient-to-r from-green-500 to-emerald-600 text-white 
 						font-bold shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200 flex justify-center items-center  text-2xl"
               onClick={generateSubtitleAndDownloadVideo}
             >
