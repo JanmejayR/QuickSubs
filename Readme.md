@@ -21,7 +21,7 @@ CREATE TABLE users (
 ```
 
 ## Setup the ENV File
-After setting up the database and creating the table, get the required credentials and use them in the commented code in /backend/database/db.js if your database is not hosted.
+Create a .env file in root directory, after setting up the database and creating the table, get the required credentials and use them in the commented code in /backend/database/db.js if your database is not hosted.
 If your database is hosted then you just need the database url, copy it and paste it in DATABASE_URL
 
 Open Git bash terminal and use this command to generate a secure string for JWT_SECRET variable, alternatively, you can use any random string
