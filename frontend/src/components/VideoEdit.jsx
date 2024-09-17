@@ -212,7 +212,7 @@ const VideoEdit = () => {
               onClick={generateSubtitleAndDownloadVideo}
             >
                 Embed Subs and Download
-            </button> : <Loader classes=" w-2/3 max-w-96 rounded-2xl h-16"/>}
+            </button> : <Loader classes=" w-2/3 max-w-96 rounded-2xl h-16 md:mb-20"/>}
           </div>
     </main>
   )
