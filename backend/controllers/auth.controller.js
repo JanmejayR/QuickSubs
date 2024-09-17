@@ -61,7 +61,7 @@ export const loginController = async(req,res)=>{
 
     }catch(error){
         console.log("the error :-" , error);
-        res.status(500).json({err: "Error in signup controller", error })
+        res.status(500).json({err: "Error in login controller", error })
     }
 
    

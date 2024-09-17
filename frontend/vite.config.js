@@ -11,7 +11,7 @@ export default defineConfig({
     port:5173,
     proxy:{
       "/api":{
-        target:"https://quicksubs-production.up.railway.app"
+        target:"https://quicksubs-production.up.railway.app",
       }
     },
     headers: {
